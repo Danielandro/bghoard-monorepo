@@ -15,7 +15,10 @@
             "main": "apps/review/src/main.tsx",
             "polyfills": "apps/review/src/polyfills.ts",
             "tsConfig": "apps/review/tsconfig.app.json",
-            "assets": ["apps/review/src/favicon.ico", "apps/review/src/assets"],
+            "assets": [
+              "apps/review/src/favicon.ico",
+              "apps/review/src/assets"
+            ],
             "styles": [],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
@@ -66,7 +69,10 @@
               "apps/review/tsconfig.app.json",
               "apps/review/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/review/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/review/**"
+            ]
           }
         },
         "test": {
@@ -102,8 +108,13 @@
           "options": {
             "linter": "eslint",
             "config": "apps/review-e2e/.eslintrc",
-            "tsConfig": ["apps/review-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/review-e2e/**"]
+            "tsConfig": [
+              "apps/review-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/review-e2e/**"
+            ]
           }
         }
       }
@@ -121,7 +132,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -152,7 +165,10 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/api/**"
+            ]
           }
         },
         "test": {
@@ -180,7 +196,10 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-interfaces/**"
+            ]
           }
         },
         "test": {
@@ -188,6 +207,161 @@
           "options": {
             "jestConfig": "libs/api-interfaces/jest.config.js",
             "tsConfig": "libs/api-interfaces/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "review-ui-tile": {
+      "root": "libs/review/ui-tile",
+      "sourceRoot": "libs/review/ui-tile/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/review/ui-tile/.eslintrc",
+            "tsConfig": [
+              "libs/review/ui-tile/tsconfig.lib.json",
+              "libs/review/ui-tile/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/ui-tile/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/review/ui-tile/jest.config.js",
+            "tsConfig": "libs/review/ui-tile/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "review-util-formatters": {
+      "root": "libs/review/util-formatters",
+      "sourceRoot": "libs/review/util-formatters/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/review/util-formatters/.eslintrc",
+            "tsConfig": [
+              "libs/review/util-formatters/tsconfig.lib.json",
+              "libs/review/util-formatters/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/util-formatters/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/review/util-formatters/jest.config.js",
+            "tsConfig": "libs/review/util-formatters/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "review-data-access-games": {
+      "root": "libs/review/data-access-games",
+      "sourceRoot": "libs/review/data-access-games/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/review/data-access-games/.eslintrc",
+            "tsConfig": [
+              "libs/review/data-access-games/tsconfig.lib.json",
+              "libs/review/data-access-games/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/data-access-games/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/review/data-access-games/jest.config.js",
+            "tsConfig": "libs/review/data-access-games/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "review-feature-list": {
+      "root": "libs/review/feature-list",
+      "sourceRoot": "libs/review/feature-list/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/review/feature-list/.eslintrc",
+            "tsConfig": [
+              "libs/review/feature-list/tsconfig.lib.json",
+              "libs/review/feature-list/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/feature-list/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/review/feature-list/jest.config.js",
+            "tsConfig": "libs/review/feature-list/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "review-feature-details": {
+      "root": "libs/review/feature-details",
+      "sourceRoot": "libs/review/feature-details/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/review/feature-details/.eslintrc",
+            "tsConfig": [
+              "libs/review/feature-details/tsconfig.lib.json",
+              "libs/review/feature-details/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/review/feature-details/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/review/feature-details/jest.config.js",
+            "tsConfig": "libs/review/feature-details/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
