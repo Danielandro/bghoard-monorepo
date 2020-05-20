@@ -217,37 +217,6 @@
         }
       }
     },
-    "review-ui-tile": {
-      "root": "libs/review/ui-tile",
-      "sourceRoot": "libs/review/ui-tile/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:lint",
-          "options": {
-            "linter": "eslint",
-            "config": "libs/review/ui-tile/.eslintrc",
-            "tsConfig": [
-              "libs/review/ui-tile/tsconfig.lib.json",
-              "libs/review/ui-tile/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/review/ui-tile/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/review/ui-tile/jest.config.js",
-            "tsConfig": "libs/review/ui-tile/tsconfig.spec.json",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "shared-util-formatters": {
       "root": "libs/shared/util-formatters",
       "sourceRoot": "libs/shared/util-formatters/src",
