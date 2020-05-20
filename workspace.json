@@ -19,7 +19,7 @@
               "apps/review/src/favicon.ico",
               "apps/review/src/assets",
               {
-                "input": "libs/shared/assets",
+                "input": "libs/shared/assets/src/lib",
                 "glob": "*.png",
                 "output": "assets"
               }
@@ -365,7 +365,7 @@
               "apps/store/src/favicon.ico",
               "apps/store/src/assets",
               {
-                "input": "libs/shared/assets",
+                "input": "libs/shared/assets/src/lib",
                 "glob": "*.png",
                 "output": "assets"
               }
@@ -714,6 +714,37 @@
           "options": {
             "jestConfig": "libs/shared/ui-tile/jest.config.js",
             "tsConfig": "libs/shared/ui-tile/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-assets": {
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "libs/shared/assets/.eslintrc",
+            "tsConfig": [
+              "libs/shared/assets/tsconfig.lib.json",
+              "libs/shared/assets/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/assets/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/assets/jest.config.js",
+            "tsConfig": "libs/shared/assets/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
