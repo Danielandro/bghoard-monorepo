@@ -1,6 +1,7 @@
 # Bghoard
 
 This project was generated using [Nx](https://nx.dev).
+[Link to tutorial repo](https://github.com/nrwl/board-game-hoard/commits/master)
 
 <p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
 
