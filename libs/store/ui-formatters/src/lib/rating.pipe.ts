@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { ratingFormat } from '@bghoard/shared/util-formatters';
 
 @Pipe({
   name: 'rating'
 })
 export class RatingPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(rating: number, ...args: unknown[]): string {
+    return ratingFormat(rating);
   }
 
 }

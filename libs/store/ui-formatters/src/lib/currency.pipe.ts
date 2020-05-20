@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { currencyFormat } from '@bghoard/shared/util-formatters';
 
 @Pipe({
   name: 'currency'
 })
 export class CurrencyPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(amount: number, ...args: unknown[]): string {
+    return currencyFormat(amount);
   }
 
 }

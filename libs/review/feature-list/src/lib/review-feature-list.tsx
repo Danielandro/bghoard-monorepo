@@ -9,7 +9,7 @@ import {
   Image,
   ImageWrapper
 } from "@bghoard/review/ui-tile";
-import { currencyFormat, ratingFormat } from "@bghoard/review/util-formatters";
+import { currencyFormat, ratingFormat } from "@bghoard/shared/util-formatters";
 import { useGames } from "@bghoard/review/data-access-games";
 
 
